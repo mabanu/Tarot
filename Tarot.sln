@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarotApi", "TarotApi\TarotApi.csproj", "{A7AE355D-6293-4517-885D-9F52C59C1957}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TarotReact", "TarotReact\TarotReact.csproj", "{14333372-C454-452C-A8C5-11012F0EA0B1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,9 +12,5 @@ Global
 		{A7AE355D-6293-4517-885D-9F52C59C1957}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7AE355D-6293-4517-885D-9F52C59C1957}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7AE355D-6293-4517-885D-9F52C59C1957}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14333372-C454-452C-A8C5-11012F0EA0B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14333372-C454-452C-A8C5-11012F0EA0B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14333372-C454-452C-A8C5-11012F0EA0B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14333372-C454-452C-A8C5-11012F0EA0B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TarotApi.Context;
+using TarotApi.Models;
 
 namespace TarotApi.Controllers;
 
@@ -6,9 +9,18 @@ namespace TarotApi.Controllers;
 [Route("[controller]")]
 public class TarotController : Controller
 {
-	// GET
-	public IActionResult Index()
+	private readonly MyDbContext _context;
+
+	public TarotController(MyDbContext context)
 	{
-		return View();
+		_context = context;
+	}
+	// GET
+	[HttpGet("{id}")]
+	public ActionResult<Card> GetCard(int id)
+	{
+		using var context = new MyDbContext();
+		var card = context.Cards.First(data => data.Id == id);
+		return card;
 	}
 }
