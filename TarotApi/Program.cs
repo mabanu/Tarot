@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MyDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -26,5 +27,10 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(x => x
+	.AllowAnyHeader()
+	.AllowAnyMethod()
+	.WithOrigins("http://localhost:3000"));
 
 app.Run();

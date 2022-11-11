@@ -16,9 +16,10 @@ public class TarotController : Controller
 		_context = context;
 	}
 	// GET
-	[HttpGet("{id}")]
-	public ActionResult<Card> GetCard(int id)
+	[HttpGet]
+	public ActionResult<Card> GetCard()
 	{
+		var id = new Random().Next(1, 5);
 		using var context = new MyDbContext();
 		var card = context.Cards.First(data => data.Id == id);
 		return card;
